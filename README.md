@@ -24,4 +24,9 @@ Tested on
 * Apple Mail 13.4 (3608.120.23.2.1)
 * Nextcloud server 19.0.3
 
+## Build notes
 
+* Copy `Config.example.xcconfig` to `Config.xcconfig`
+* Build
+* Move the product `CargoLifter.mailbundle` to `/Library/Mail/Bundles`
+* Enable under Mail *Preferences : Genereal : Manage Plug-ins...*
