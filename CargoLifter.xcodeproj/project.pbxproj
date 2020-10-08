@@ -739,7 +739,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/Plugin/External/MailMessageUUIDs/GetLatestIntoPlugin.sh 10.11\n";
+			shellScript = "# Adding manually to Info.plist, thus skipping https://github.com/lksoft/MailMessageUUIDs\n# ${SRCROOT}/Plugin/External/MailMessageUUIDs/GetLatestIntoPlugin.sh 10.11\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

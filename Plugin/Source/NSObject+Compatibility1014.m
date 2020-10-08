@@ -20,6 +20,9 @@
 //  Copyright © 2017 Mailbutler. All rights reserved.
 //
 
+// WARP addition
+// 10.14 class dumps seem to work for 10.15 too, thus changing to isMojaveOrLater()
+
 #define NotAvailable()  NSAssert(false, @"This method does not exist in macOS 10.14!")
 
 #import <Cocoa/Cocoa.h>
@@ -33,7 +36,7 @@
 
 - (NSWindow*)window { return [[(NSViewController*)self view] window]; }
 
-+ (void)load { if(isMojave()) CLAddAsCategoryToClass(@class(ComposeViewController)); }
++ (void)load { if(isMojaveOrLater()) CLAddAsCategoryToClass(@class(ComposeViewController)); }
 
 @end
 
@@ -41,7 +44,7 @@
 
 - (id)fileWrapperForAccessLevel:(long long)arg1 { return [(MCAttachment*)self fileWrapperForAccessLevel:arg1 error:nil]; }
 
-+ (void)load { if(isMojave()) CLAddAsCategoryToClass(@class(MCAttachment)); }
++ (void)load { if(isMojaveOrLater()) CLAddAsCategoryToClass(@class(MCAttachment)); }
 
 @end
 
@@ -49,6 +52,6 @@
 
 - (void)updateDeliveryAccountControl:(id)arg1 { NotAvailable(); }
 
-+ (void)load { if(isMojave()) CLAddAsCategoryToClass(@class(HeadersEditor)); }
++ (void)load { if(isMojaveOrLater()) CLAddAsCategoryToClass(@class(HeadersEditor)); }
 
 @end
